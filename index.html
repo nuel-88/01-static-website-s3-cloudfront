@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CLF Project 1 — Static site</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <p class="eyebrow">AWS Cloud Practitioner · Project 1</p>
+      <h1>Static website on S3 and CloudFront</h1>
+      <p>
+        This page is an object in a private Amazon S3 bucket, delivered through
+        Amazon CloudFront with Origin Access Control.
+      </p>
+    </header>
+    <main>
+      <section>
+        <h2>What this lab proves</h2>
+        <ul>
+          <li>Object storage can host a site without Amazon EC2.</li>
+          <li>The bucket stays private; only CloudFront can read objects.</li>
+          <li>Viewers use HTTPS at the edge.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Services in play</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Job</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Amazon S3</td>
+              <td>Origin object store</td>
+            </tr>
+            <tr>
+              <td>Amazon CloudFront</td>
+              <td>CDN, TLS, caching</td>
+            </tr>
+            <tr>
+              <td>IAM / bucket policy</td>
+              <td>Allow CloudFront only</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>Tear down the distribution and bucket when the lab is finished.</p>
+    </footer>
+  </body>
+</html>
